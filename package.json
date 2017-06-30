@@ -1,0 +1,19 @@
+{
+  "name": "susipwan-information-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anjucheran/Susipwan-Information-System.git"
+  },
+  "author": "cyberX <cyberX.cse15@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anjucheran/Susipwan-Information-System/issues"
+  },
+  "homepage": "https://github.com/anjucheran/Susipwan-Information-System#readme"
+}
