@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Payments</title>
+	 <link rel="stylesheet" type="text/css" href="css/payments.css" />
+    <style type="text/css" >
+        body{
+        background-image: url(back5.jpg);
+        }
+    </style>
+	<?php
+
+	include ("dbconnection.php");
+
+	$id=$_POST["id"];
+	$class=$_POST["class"];
+	$month=$_POST["month"];
+	$fee=$_POST["fee"];
+
+
+
+	//$link=mysqli_connect("localhost","root","201412699","testteacherdb");
+
+
+
+	$sql="UPDATE ".$class." SET ".$month." = ".$fee." WHERE id =".$id." ";
+
+	mysqli_query($link,$sql);
+
+	//echo "Data submitted successfuly";
+	?> 
+
+</head>
+<body>
+<form  method="POST">
+	<div> <label>Index<input type="text" name="id" /> </label>
+		<label>Class</label>
+
+		<select class="Class" name="class">
+				<option value="0">-</option>
+				<option value="physics_2018t">Physics_2018T</option>
+				<option value="physics_2019t">Physics_2019T</option>
+				<option value="physics_2018r">Physics_2018R</option>
+				<option value="chemistry_2018t">Chemistry_2018T</option>
+				<option value="chemistry_2019t">Chemistry_2019T</option>
+
+		</select>
+		<label>Month</label>
+
+		<select class="Month" name="month">
+				<option value="0">-</option>
+				<option value="jan">January</option>
+				<option value="feb">February</option>
+				<option value="march">March</option>
+				<option value="april">April</option>
+				<option value="may">May</option>
+				<option value="june">June</option>
+				<option value="july">July</option>
+				<option value="aug">Auguest</option>
+				<option value="sep">September</option>
+				<option value="oct">October</option>
+				<option value="nov">November</option>
+				<option value="dec">December</option>
+
+		</select>
+
+
+		 
+		<label>Fee <input type="number" name="fee"/> </label>
+	</div>
+        
+	<div>
+		<input class="submit" type="" value="Back"/>
+
+        <input class="clear" type="" value="Clear"/>
+        <input class="register" type="submit" value="Done"/>
+	</div>
+</form>
+</body>
+</html>

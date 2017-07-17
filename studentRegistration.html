@@ -1,95 +1,49 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Student Registration Form</title>
     <link rel="stylesheet" type="text/css" href="css/studentRegistration.css" />
+
+
+      <script type="text/javascript">
+        var expanded = false;
+
+        function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+         } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+  }
+}
+
+  </script>
+
+
+
+
 </head>
 <body>
     <section class="registration_form">
         <he><h2>Student Registration</h2></he>
-        <form>
+        <form action="studentRegistration.php" method="POST">
             <p>
                 <label for="name" class="name" >Name
                 </label>
                 <input type="text" name="name" placeholder="Name"/>
             </p>
             <p>
-                <label for="DOB" class="DOB" >DOB</label><br/>
-                <select class="date" id="form_dob_day" name="dob_day">
-	<option value="-">-</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-	<option value="5">5</option>
-	<option value="6">6</option>
-	<option value="7">7</option>
-	<option value="8">8</option>
-	<option value="9">9</option>
-	<option value="10">10</option>
-	<option value="11">11</option>
-	<option value="12">12</option>
-	<option value="13">13</option>
-	<option value="14">14</option>
-	<option value="15">15</option>
-	<option value="16">16</option>
-	<option value="17">17</option>
-	<option value="18">18</option>
-	<option value="19">19</option>
-	<option value="20">20</option>
-	<option value="21">21</option>
-	<option value="22">22</option>
-	<option value="23">23</option>
-	<option value="24">24</option>
-	<option value="25">25</option>
-	<option value="26">26</option>
-	<option value="27">27</option>
-	<option value="28">28</option>
-	<option value="29">29</option>
-	<option value="30">30</option>
-	<option value="31">31</option>
-</select>
-<select class="month" id="form_dob_month" name="dob_month">
-	<option value="-">-</option>
-	<option value="1">January</option>
-	<option value="2">Febuary</option>
-	<option value="3">March</option>
-	<option value="4">April</option>
-	<option value="5">May</option>
-	<option value="6">June</option>
-	<option value="7">July</option>
-	<option value="8">August</option>
-	<option value="9">September</option>
-	<option value="10">October</option>
-	<option value="11">November</option>
-	<option value="12">December</option>
-</select>
+                <label>DOB<br><input type="date" name="dob" id="dob"/></label>
 
- <select class="year" id="form_dob_year" name="dob_year">
-	<option value="-">-</option>
-	<option value="2011">2011</option>
-	<option value="2010">2010</option>
-	<option value="2009">2009</option>
-	<option value="2008">2008</option>
-	<option value="2007">2007</option>
-	<option value="2006">2006</option>
-	<option value="2005">2005</option>
-	<option value="2004">2004</option>
-	<option value="2003">2003</option>
-	<option value="2002">2002</option>
-	<option value="2001">2001</option>
-	<option value="2000">2000</option>
-	<option value="1999">1999</option>
-	<option value="1998">1998</option>
-	<option value="1997">1997</option>
-	<option value="1996">1996</option>
-	<option value="1995">1995</option>
-
-</select>
             </p>
             <p>
-              <label name="nIC">NIC</label>
-              <input type="text" name="NIC"/>
+              <label for="nic" class="nic">NIC</label>
+              <input type="text" name="nic" id="nic"/>
             </p>
             <p>
                 <label name="address">Address</label>
@@ -104,24 +58,56 @@
                 <input type="email" name="email"/>
             </p>
             <p>
-                <label>Subject</label>
-                <select class="subSelection" id="subject" name="sub">
-                    	<option value="-">-</option>
+                <label>Classes</label><br>
+                
+                    	<!--<option value="-">-</option>
                         <option value="1">Physics</option>
                         <option value="2">Chemistry</option>
                         <option value="3">Combined Mathematics</option>
                         <option value="4">Bio Science</option>
-                        <option value="5">General English</option>
+                        <option value="5">General English</option>	-->
+                        
 
-                </select>
+                        <label><input type="checkbox" name="class" value="physics_2018t" />Physics_2018T</label><br>
+                        <label><input type="checkbox" name="class" value="physics_2019t" />Physics_2019T</label><br>
+                        <label><input type="checkbox" name="class" value="physics_2018r" />Physics_2018R</label><br>
+                        <label><input type="checkbox" name="class" value="chemistry_2018t" />Chemistry_2018T</label><br>
+                        <label><input type="checkbox" name="class" value="chemistry_2019t"/>Chemistry_2019T</label>
+                        
+
+                         <!--                    <div class="multiselect">
+                        <div class="selectBox" onclick="showCheckboxes()">
+                          <select>
+                            <option>Select classes</option>
+                          </select>
+                          <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes">
+                          <label for="one">
+                            <input type="checkbox" id="one" />physics_2018t</label><br>
+                          <label for="two">
+                            <input type="checkbox" id="two" />physics_2019t</label><br>
+                          <label for="three">
+                            <input type="checkbox" id="three" />physics_2018r</label><br>
+                          <label for="one">
+                            <input type="checkbox" id="one" />chemistry_2018t</label><br>
+                          <label for="one">
+                            <input type="checkbox" id="one" />chemistry_2019t</label>
+                        </div>
+                        </div>
+-->
+
+                
             </p>
             <p class="buttons">
-                <input class="submit" type="submit" value="Back"/>
+                <input class="submit" type="" value="Back"/>
 
-                <input class="clear" type="Submit" value="Clear"/>
+                <input class="clear" type="" value="Clear"/>
                 <input class="register" type="submit" value="Register"/>
             </p>
         </form>
+
     </section>
+
 </body>
 </html>
