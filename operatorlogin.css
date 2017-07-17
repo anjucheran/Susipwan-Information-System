@@ -1,0 +1,44 @@
+body{
+ background-image:  url("back5.jpg");
+}
+.selectionbox{
+    
+    border:2px solid lightblue;
+    box-shadow: 0 1px #5670A4 inset, 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 300px;
+    height: 290px;
+
+    margin: 60px auto;
+    margin-top: 250px;
+    padding: 50px 30px 0 30px;
+    text-align: center;
+   
+
+
+}
+.teacher,.student,.attendance,.payments{
+    
+  
+    font-size: 20px;
+    
+    width: 90%;
+	border: 1px solid white;
+	outline: none;
+	padding: 10px;
+
+	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+	cursor:pointer;
+
+
+    border-radius: 4px 4px 0 0;
+
+    box-shadow: 0 -1px 0 #E0E0E0 inset,0 1px 2px rgba(0, 0, 0, 0.23) inset;
+    margin-top: 15px;
+  
+}
+a{
+ 
+}
+

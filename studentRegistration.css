@@ -9,7 +9,7 @@ body{
   box-shadow: 0 1px #5670A4 inset, 0 0 10px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   width: 400px;
-  height: 625px;
+  height: 750px;
   margin: 60px auto;
   padding: 50px 30px 0 30px;
 
@@ -22,19 +22,18 @@ body{
     padding: 0;
     font-family:sans-serif;
     text-align: center;
-      color:darkgray;
+    color:darkgray;
 
   }
 
 label{
   font-family:sans-serif;
   text-align: left;
-
-    color: darkgrey;
+  color: darkgrey;
 
 
 }
-input[type="text"],input[type="tel"],input[type="email"]{
+input[type="text"],input[type="tel"],input[type="email"],input[type="date"]{
   width: 90%;
 	border: 1px solid #314d89;
 	outline: none;
@@ -70,22 +69,15 @@ input[type="text"],input[type="tel"],input[type="email"]{
 
 
 }
-.date,.month,.year{
-  border: 1px solid #314d89;
-  outline: none;
-  padding: 5px;
-  color: black;
-  font-weight: 400;
-  border-radius: 4px 4px 0 0;
-  box-shadow: 0 -1px 0 #E0E0E0 inset, 1px 2px  rgba(0, 0, 0, 0.23) inset;
-}
+
+
 .submit,.clear,.register{
   font-family:sans-serif;
   font-weight: 500;
   background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
 
   width: 20%;
-  margin: auto;
+  margin-bottom: 2px;
   border-radius: 3px;
   padding: 4px;
   font-size: 13px;
@@ -94,3 +86,39 @@ input[type="text"],input[type="tel"],input[type="email"]{
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.17), 0 1px 0 rgba(255, 255, 255, 0.36) inset;
 
 }
+    .multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+
+
+  
