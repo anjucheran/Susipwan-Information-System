@@ -1,5 +1,5 @@
 <?php
-	 $link=mysqli_connect("localhost","root","201412699","testteacherdb")
+	 $link=mysqli_connect("localhost","root","","testteacherdb")
 	 or die('error connectiong to mysql server');
 
 ?>
